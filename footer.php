@@ -34,6 +34,10 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<div cllas='site-footer' id='copyend'>
+	<p>
+		Merengue Merengue es una marca registrada propiedad de Horneando Ideas S.A.P.I. de C.V. Todos los derechos reservados.
+	</p>
+</div>
 </body>
 </html>
