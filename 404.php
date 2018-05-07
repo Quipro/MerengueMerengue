@@ -20,9 +20,9 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
-
+					<button type="button" class="btnIni"><a href="https://merenguemerengue.com/">Regresar a la página de inicio</a></button>
 					<?php
-					echo '<section aria-label="' . esc_html__( 'Search', 'storefront' ) . '">';
+				echo '<section aria-label="' . esc_html__( 'Search', 'storefront' ) . '">';
 
 					if ( storefront_is_woocommerce_activated() ) {
 						the_widget( 'WC_Widget_Product_Search' );
@@ -64,9 +64,11 @@ get_header(); ?>
 							) );
 
 						echo '</section>';
-					}
-					?>
 
+					}
+					echo '<img class="galleta" srcset="'.get_template_directory_uri().'/assets/images/customizer/notFoundPage/galleta.png" alt="cookie">';
+					?>
+					
 				</div><!-- .page-content -->
 			</div><!-- .error-404 -->
 
