@@ -21,6 +21,8 @@ add_filter( 'woocommerce_product_tabs', 'remove_woocommerce_product_tabs', 98 );
 /**	 * Hook in each tabs callback function after single content.	 */	
 add_action( 'woocommerce_after_add_to_cart_button', 'woocommerce_product_description_tab' );	
 add_action( 'woocommerce_after_add_to_cart_button', 'woocommerce_product_additional_information_tab' );	
+add_action( 'woocommerce_after_single_product', 'comments_template' );
+
 
 add_action( 'wp_enqueue_scripts', 'productCss');
 
@@ -53,10 +55,10 @@ function custom_action_after_single_product_title() {
 	     		echo '</th>';
      		echo '</tr>';
         echo '</table>';
-
    /* foreach($terms as $term) {	
     }*/
 }
+
 
 
 //Peut être
