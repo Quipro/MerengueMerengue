@@ -302,11 +302,30 @@ if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	function storefront_homepage_header() {
 		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
-		<header class="entry-header">
-			<?php
-			the_title( '<h1 class="entry-title">', '</h1>' );
-			?>
-		</header><!-- .entry-header -->
+		<div class="footer-widgets row-1 col-2 fix" style="border: none; height: 37em;" >
+			<div class="block footer-widget-1" style="border: none;">
+				
+				<?php 
+				$texL =  get_post_meta( get_the_ID(), 'Home_section1_L_Text', true );
+				if ( ! empty( $texL ) ) {
+				    echo $texL;
+				}
+				  ?>
+
+			</div>
+			<div class="block footer-widget-2">
+				
+				<?php 
+				$texR =  get_post_meta( get_the_ID(), 'Home_section1_R_Text', true );
+				if ( ! empty( $texR ) ) {
+				    echo $texR;
+				}
+				  ?>
+
+			</div>
+		</div>
+
+		
 		<?php
 	}
 }

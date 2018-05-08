@@ -100,6 +100,7 @@ function storefront_header_styles() {
 		$styles['background-image'] = $header_bg_image;
 	}
 
+
 	$styles = apply_filters( 'storefront_header_styles', $styles );
 
 	foreach ( $styles as $style => $value ) {
